@@ -14,7 +14,7 @@ public class TestModel extends TestUtils {
 
     /**
      * ******************
-     * *  TESTING TILT  *
+     * *  TESTING TILT
      * ******************
      * <p>
      * The following tests determine the correctness of your `tilt`
