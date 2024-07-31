@@ -125,4 +125,5 @@ public class LinkedListDeque<Type> {
             addLast((Type) other.get(i));
         }
     }
+
 }
