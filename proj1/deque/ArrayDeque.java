@@ -94,9 +94,9 @@ public class ArrayDeque<Type> {
         Type pop = ArrayDeque[0];
         size = size - 1;
         ArrayDeque = newArray;
-//        if ((double) ( size / ArrayDeque.length ) < 0.25) {
-//            ArrayDeque = resize(ArrayDeque.length / 2);
-//        }
+        if ((double) ( size / ArrayDeque.length ) < 0.25) {
+            ArrayDeque = resize(ArrayDeque.length / 2);
+        }
         return pop;
     }
 
@@ -119,7 +119,7 @@ public class ArrayDeque<Type> {
         return ArrayDeque[index];
     }
 
-    /** A method to creat a deep copy of other. */
+    /** A method to creat a deep copy of others. */
     public ArrayDeque(ArrayDeque other) {
         Type[] ArrayDeque = (Type[]) new Object[other.ArrayDeque.length];
         System.arraycopy(other.ArrayDeque, 0, ArrayDeque, 0, size);
