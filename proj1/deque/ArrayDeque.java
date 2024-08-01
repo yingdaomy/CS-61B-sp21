@@ -94,7 +94,7 @@ public class ArrayDeque<Type> {
         Type pop = ArrayDeque[0];
         size = size - 1;
         ArrayDeque = newArray;
-        if ((double) ( size / ArrayDeque.length ) < 0.25) {
+        if ((double) ( size / ArrayDeque.length ) < 0.25 && ArrayDeque.length > 100) {
             ArrayDeque = resize(ArrayDeque.length / 2);
         }
         return pop;
