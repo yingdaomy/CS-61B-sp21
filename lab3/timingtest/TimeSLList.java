@@ -18,11 +18,30 @@ public class TimeSLList {
     }
 
     public static void main(String[] args) {
+
         timeGetLast();
     }
 
     public static void timeGetLast() {
         // TODO: YOUR CODE HERE
+        AList<Integer> Ns = new AList<>();
+        AList<Double> times = new AList<>();
+        AList<Integer> opCounts = new AList<>();
+        for (int i = 1000; i <= 128000; i *= 2) {
+            SLList<Integer> testList = new SLList<>();
+            for (int j = 0; j < i; j += 1) {
+                testList.addLast(j);
+            }
+            Stopwatch sw = new Stopwatch();
+            for (int k = 1; k <= 10000; k += 1) {
+                testList.addLast(k);
+            }
+            double timeInSeconds = sw.elapsedTime();
+            Ns.addLast(i);
+            times.addLast(timeInSeconds);
+            opCounts.addLast(10000);
+        }
+        printTimingTable(Ns, times, opCounts);
     }
 
 }

@@ -2,7 +2,7 @@ package deque;
 
 public class ArrayDeque<Type> {
     Type[] ArrayDeque = (Type[]) new Object[100];
-    int size;
+    static int size;
 
     /** A method to creat an empty deque. */
     public ArrayDeque() {
@@ -67,7 +67,7 @@ public class ArrayDeque<Type> {
     }
 
     /** A method to judge if the deque is empty. */
-    public boolean isEmpty() {
+    public static boolean isEmpty() {
         return size == 0;
     }
 
